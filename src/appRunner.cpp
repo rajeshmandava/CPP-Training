@@ -1,5 +1,5 @@
 #include "appRunner.h"
-
+#include "algorithms/sort/countSort.cpp"
 appRunner::appRunner() {
   std::cout<<"appRunner::Constructor"<<std::endl;
   isInitialised = true;
@@ -11,6 +11,7 @@ int appRunner::run() {
   if(isInitialised)
   {
     //Create objects of the app
+    callCountSort();
   }
   else
   {
