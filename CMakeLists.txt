@@ -5,6 +5,7 @@ project(dev)
 add_executable(dev
   src/main.cpp
   src/appRunner.cpp  
+  src/algorithms/sort/countSort.cpp
 ) 
 
 

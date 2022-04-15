@@ -3,8 +3,9 @@
 #include <random>
 #include <iterator>
 #include <algorithm>
+#include "countSort.h"
 
-std::vector<int> countSort(std::vector<int> input, int size)
+std::vector<int> countSort::sort(std::vector<int> input, int size)
 {
   std::vector<int>::iterator maxElement;
   maxElement = std::max_element(input.begin(), input.end());
@@ -32,7 +33,7 @@ std::vector<int> countSort(std::vector<int> input, int size)
   return output;
 }
 
-void callCountSort()
+void countSort::callCountSort()
 {
 
   // First create an instance of an engine.
@@ -48,7 +49,7 @@ void callCountSort()
     std::vector<int> input(5);
     std::generate(std::begin(input), std::end(input), gen);
     std::vector<int> output;
-    output = countSort(input, input.size());
+    output = sort(input, input.size());
     for(auto i:output)
       std::cout<<i<<" ";
     std::cout<<std::endl;
